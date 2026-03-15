@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | Enterprise Rent-A-Car</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────── -->
+  <header class="header">
+    <a class="header-logo" href="#">
+      <img src="fictional_logo.png" alt="Enterprise Rent-A-Car" class="logo-img" />
+    </a>
+    <nav class="header-nav">
+      <a href="#">Reservations</a>
+      <a href="#">Locations</a>
+      <a href="#">Cars & Rates</a>
+      <a href="#">Business Rentals</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <!-- ── TRAINING DISCLAIMER BANNER ─────────────────────────────── -->
+  <div class="disclaimer-banner" role="alert" aria-live="assertive">
+    <span class="banner-icon">⚠️</span>
+    <p class="banner-title">
+      THIS IS NOT ACTUALLY ENTERPRISE RENT-A-CAR<br>
+      BUT SIMPLY A PAGE CONSTRUCTED FOR A TRAINING EXERCISE
+    </p>
+    <p class="banner-subtitle">
+      This page is a simulated phishing demo used in a cybersecurity awareness training program.
+      It is not affiliated with, endorsed by, or operated by Enterprise Rent-A-Car or any of its subsidiaries.
+      Do not enter real credentials. Any data you submit is captured for demonstration purposes only.
+    </p>
+  </div>
+
+  <!-- ── Green utility bar ───────────────────────────────────────── -->
+  <div class="hero-bar">
+    <p>Welcome back. Sign in to manage your reservations and Enterprise Plus rewards.</p>
+  </div>
+
+  <!-- ── Main content ────────────────────────────────────────────── -->
+  <main>
+    <div class="main-content">
+
+      <!-- Sign-in form card -->
+      <div class="signin-card">
+        <h1>Sign In</h1>
+        <p class="card-subtitle">
+          Access your Enterprise account to manage bookings, rewards, and preferences.
+        </p>
+
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="username">Email Address or Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your email or username"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <a class="forgot-link" href="#">Forgot your password?</a>
+
+          <button type="submit" class="btn-signin">Sign In</button>
+        </form>
+
+        <hr class="divider" />
+
+        <p class="create-account">
+          New to Enterprise? <a href="#">Create an account</a>
+        </p>
+      </div>
+
+      <!-- Info panel -->
+      <div class="info-panel">
+        <h2>Manage Your Rental Experience, Anytime</h2>
+        <p>
+          Sign in to your Enterprise account for fast access to upcoming reservations,
+          loyalty rewards, and exclusive member benefits — all in one place.
+        </p>
+        <ul class="benefit-list">
+          <li>
+            <div class="benefit-icon">&#10003;</div>
+            <span><strong>Enterprise Plus Rewards</strong> — Earn points on every rental and redeem for free days.</span>
+          </li>
+          <li>
+            <div class="benefit-icon">&#10003;</div>
+            <span><strong>Faster Pickup</strong> — Skip the counter with your saved preferences and payment method.</span>
+          </li>
+          <li>
+            <div class="benefit-icon">&#10003;</div>
+            <span><strong>Manage Reservations</strong> — View, modify, or cancel upcoming rentals in seconds.</span>
+          </li>
+          <li>
+            <div class="benefit-icon">&#10003;</div>
+            <span><strong>Exclusive Member Rates</strong> — Access discounts available only to signed-in members.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">Enterprise</div>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Enterprise Holdings, Inc. All Rights Reserved. &nbsp;|&nbsp;
+      <strong>TRAINING DEMO ONLY — NOT THE REAL ENTERPRISE WEBSITE.</strong>
+    </div>
+  </footer>
+
+</body>
+</html>

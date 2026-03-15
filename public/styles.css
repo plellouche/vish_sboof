@@ -1,0 +1,448 @@
+/* ─── Enterprise Brand Colors ─────────────────────────────────────── */
+:root {
+  --enterprise-green:       #169A5A;
+  --enterprise-green-light: #1db86b;
+  --enterprise-green-hover: #117a47;
+  --enterprise-gray:        #f4f4f4;
+  --enterprise-dark:        #1a1a1a;
+  --enterprise-mid-gray:    #555555;
+  --enterprise-border:      #cccccc;
+  --white:                  #ffffff;
+  --warning-yellow:         #ffc107;
+  --warning-dark:           #856404;
+  --warning-bg:             #fff3cd;
+  --warning-border:         #ffca2c;
+}
+
+/* ─── Reset & Base ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--enterprise-gray);
+  color: var(--enterprise-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Header ──────────────────────────────────────────────────────── */
+.header {
+  background-color: var(--enterprise-green);
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.header-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.header-nav a:hover { opacity: 1; }
+
+/* ─── Training Disclaimer Banner ──────────────────────────────────── */
+.disclaimer-banner {
+  background-color: var(--warning-bg);
+  border-top: 4px solid var(--warning-border);
+  border-bottom: 4px solid var(--warning-border);
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.disclaimer-banner .banner-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.disclaimer-banner .banner-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--warning-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.disclaimer-banner .banner-subtitle {
+  font-size: 14px;
+  color: var(--warning-dark);
+  font-weight: 500;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ─── Hero / Top bar (secondary green bar) ────────────────────────── */
+.hero-bar {
+  background-color: var(--enterprise-green);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-bar p {
+  color: var(--white);
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ─── Main content layout ─────────────────────────────────────────── */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── Sign-in Card ────────────────────────────────────────────────── */
+.signin-card {
+  background: var(--white);
+  border: 1px solid var(--enterprise-border);
+  border-top: 4px solid var(--enterprise-green);
+  border-radius: 4px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.signin-card h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--enterprise-dark);
+  margin-bottom: 6px;
+}
+
+.signin-card .card-subtitle {
+  font-size: 13px;
+  color: var(--enterprise-mid-gray);
+  margin-bottom: 28px;
+  line-height: 1.4;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--enterprise-dark);
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--enterprise-border);
+  border-radius: 3px;
+  font-size: 15px;
+  color: var(--enterprise-dark);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: var(--white);
+}
+
+.form-group input:focus {
+  border-color: var(--enterprise-green);
+  box-shadow: 0 0 0 3px rgba(0, 103, 71, 0.12);
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--enterprise-green);
+  text-decoration: none;
+  margin-top: -12px;
+  margin-bottom: 22px;
+}
+
+.forgot-link:hover { text-decoration: underline; }
+
+.btn-signin {
+  width: 100%;
+  padding: 13px;
+  background-color: var(--enterprise-green);
+  color: var(--white);
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background-color 0.2s;
+}
+
+.btn-signin:hover { background-color: var(--enterprise-green-hover); }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--enterprise-border);
+  margin: 28px 0;
+}
+
+.create-account {
+  text-align: center;
+  font-size: 13px;
+  color: var(--enterprise-mid-gray);
+}
+
+.create-account a {
+  color: var(--enterprise-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-account a:hover { text-decoration: underline; }
+
+/* ─── Info Panel (right side) ─────────────────────────────────────── */
+.info-panel {
+  flex: 1;
+  max-width: 560px;
+  padding-top: 4px;
+}
+
+.info-panel h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--enterprise-dark);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.info-panel p {
+  font-size: 14px;
+  color: var(--enterprise-mid-gray);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.benefit-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--enterprise-mid-gray);
+  line-height: 1.5;
+}
+
+.benefit-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background-color: var(--enterprise-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────── */
+.footer {
+  background-color: var(--enterprise-dark);
+  padding: 30px 40px;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-bottom {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+}
+
+/* ─── Thank You Page ──────────────────────────────────────────────── */
+.thankyou-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.thankyou-card {
+  background: var(--white);
+  border: 1px solid var(--enterprise-border);
+  border-top: 4px solid var(--enterprise-green);
+  border-radius: 4px;
+  padding: 50px 50px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.thankyou-card .check-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--enterprise-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 30px;
+  color: var(--white);
+}
+
+.thankyou-card h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--enterprise-dark);
+  margin-bottom: 12px;
+}
+
+.thankyou-card p {
+  font-size: 14px;
+  color: var(--enterprise-mid-gray);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.thankyou-card .back-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 11px 28px;
+  background-color: var(--enterprise-green);
+  color: var(--white);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.thankyou-card .back-link:hover { background-color: var(--enterprise-green-hover); }
+
+/* ─── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Header */
+  .header { padding: 0 16px; }
+  .header-nav { display: none; }
+
+  /* Disclaimer banner */
+  .disclaimer-banner { padding: 14px 16px; }
+  .disclaimer-banner .banner-icon { font-size: 24px; margin-bottom: 6px; }
+  .disclaimer-banner .banner-title { font-size: 15px; letter-spacing: 0.5px; }
+  .disclaimer-banner .banner-subtitle { font-size: 12px; }
+
+  /* Hero bar */
+  .hero-bar { padding: 8px 16px; }
+
+  /* Main layout — stack vertically */
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  /* Sign-in card full width */
+  .signin-card {
+    max-width: 100%;
+    padding: 28px 20px;
+  }
+
+  /* Info panel full width, below form */
+  .info-panel {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .info-panel h2 { font-size: 20px; }
+
+  /* Thank-you card */
+  .thankyou-card {
+    padding: 36px 20px;
+  }
+
+  /* Footer */
+  .footer { padding: 20px 16px; }
+  .footer-top { flex-direction: column; gap: 14px; }
+  .footer-links { gap: 14px; }
+}
+
+@media (max-width: 420px) {
+  .disclaimer-banner .banner-title { font-size: 13px; }
+  .signin-card h1 { font-size: 19px; }
+  .btn-signin { font-size: 15px; padding: 12px; }
+  .footer-links { flex-direction: column; gap: 10px; }
+}
